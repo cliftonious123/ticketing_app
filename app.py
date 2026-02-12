@@ -34,9 +34,6 @@ def new_ticket():
         title = request.form.get('title')
         description = request.form.get('description')
         
-        # Here is where you would call your Partner's Microservice!
-        # For now, we will simulate it with a random choice.
-        # Example: priority = call_partner_service(description)
         priority = random.choice(["Low", "Medium", "High"]) 
         
         tickets = load_tickets()
@@ -72,6 +69,4 @@ def resolve_ticket(ticket_id):
     save_tickets(tickets)
     return redirect(url_for('index'))
 
-if __name__ == '__main__':
-    # Debug mode allows you to see errors in the browser and auto-reloads on changes
-    app.run(debug=True, port=5000)
+app.run()
