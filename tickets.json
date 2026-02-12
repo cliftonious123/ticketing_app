@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Printer not working",
+        "description": "The printer on the 2nd floor is out of paper.",
+        "priority": "Low",
+        "status": "Closed"
+    },
+    {
+        "id": 2,
+        "title": "shit broke",
+        "description": "my shit broke",
+        "priority": "Low",
+        "status": "Closed"
+    }
+]
