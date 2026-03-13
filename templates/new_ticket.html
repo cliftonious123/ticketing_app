@@ -13,7 +13,7 @@
             <h4>Submit a New Issue</h4>
         </div>
         <div class="card-body">
-            <form action="/new" method="POST">
+            <form action="/new" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="title" class="form-label">Issue Title</label>
                     <input type="text" class="form-control" id="title" name="title" placeholder="e.g., Internet is down" required>
@@ -22,6 +22,12 @@
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
                     <textarea class="form-control" id="description" name="description" rows="4" placeholder="Describe the problem..." required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="attachment" class="form-label">Attach File (Optional)</label>
+                    <input type="file" class="form-control" id="attachment" name="attachment">
+                    <div class="form-text">Screenshots or relevant files.</div>
                 </div>
 
                 <div class="d-grid gap-2">

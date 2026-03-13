@@ -4,13 +4,34 @@
         "title": "Printer not working",
         "description": "The printer on the 2nd floor is out of paper.",
         "priority": "Low",
-        "status": "Closed"
+        "status": "Open"
     },
     {
         "id": 2,
-        "title": "shit broke",
-        "description": "my shit broke",
-        "priority": "Low",
+        "title": "Internet is down",
+        "description": "the internet doesn't seem to be working",
+        "priority": "High",
+        "status": "Open"
+    },
+    {
+        "id": 3,
+        "title": "mouse is broken",
+        "description": "broken mouse",
+        "priority": "Medium",
         "status": "Closed"
+    },
+    {
+        "id": 295836,
+        "title": "dfa",
+        "description": "fdafdfa",
+        "priority": "Medium",
+        "status": "Open"
+    },
+    {
+        "id": 451730,
+        "title": "dfadad",
+        "description": "fdfaaf",
+        "priority": "Low",
+        "status": "Open"
     }
 ]

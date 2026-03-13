@@ -1,1 +1,1 @@
-web: gunicorn rng_service:app
+web: gunicorn app:app
