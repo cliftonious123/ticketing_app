@@ -12,6 +12,7 @@ DATA_FILE = 'tickets.json'
 RNG_SERVICE_URL = "https://rng-microservice-4b0c29beb99a.herokuapp.com/generate-id"
 FILE_SERVICE_URL = "https://attachment-microservice-fd7891de4df9.herokuapp.com/upload"
 FILE_LIST_URL = "https://attachment-microservice-fd7891de4df9.herokuapp.com/files"
+FILE_DOWNLOAD_URL = "https://attachment-microservice-fd7891de4df9.herokuapp.com/download"
 METRICS_REPORT_URL = "https://metrics-microservice-6c7a57f3cbb8.herokuapp.com/report"
 METRICS_LOG_URL = "https://metrics-microservice-6c7a57f3cbb8.herokuapp.com/log"
 AUDIT_LOG_URL = "https://audit-microservice-4c490370dceb.herokuapp.com/audit"
@@ -204,7 +205,7 @@ def view_attachments(item_id):
         data = response.json()
     except Exception:
         data = {"error": "Attachment service unavailable"}
-    return render_template('attachments.html', data=data, item_id=item_id)
+    return render_template('attachments.html', data=data, item_id=item_id, download_url=FILE_DOWNLOAD_URL)
 
 if __name__ == '__main__':
     app.run()
