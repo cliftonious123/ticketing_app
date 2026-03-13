@@ -10,12 +10,12 @@ app.secret_key = 'super-secret-key-replace-in-production' # For session manageme
 
 DATA_FILE = 'tickets.json'
 RNG_SERVICE_URL = "https://rng-microservice-4b0c29beb99a.herokuapp.com/generate-id"
-FILE_SERVICE_URL = "http://127.0.0.1:5002/upload"
-FILE_LIST_URL = "http://127.0.0.1:5002/files"
-METRICS_REPORT_URL = "http://127.0.0.1:5003/report"
-METRICS_LOG_URL = "http://127.0.0.1:5003/log"
-AUDIT_LOG_URL = "http://127.0.0.1:5004/audit"
-AUDIT_HISTORY_URL = "http://127.0.0.1:5004/history"
+FILE_SERVICE_URL = "https://attachment-microservice-fd7891de4df9.herokuapp.com/upload"
+FILE_LIST_URL = "https://attachment-microservice-fd7891de4df9.herokuapp.com/files"
+METRICS_REPORT_URL = "https://metrics-microservice-6c7a57f3cbb8.herokuapp.com/report"
+METRICS_LOG_URL = "https://metrics-microservice-6c7a57f3cbb8.herokuapp.com/log"
+AUDIT_LOG_URL = "https://audit-microservice-4c490370dceb.herokuapp.com/audit"
+AUDIT_HISTORY_URL = "https://audit-microservice-4c490370dceb.herokuapp.com/history"
 API_KEY = "A3F91C2B44F0E1D9B07C8E5A12F4B6D3"
 
 def login_required(f):
