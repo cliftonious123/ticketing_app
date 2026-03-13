@@ -31,8 +31,18 @@
             <ul class="list-group">
                 {% for file in data.files %}
                 <li class="list-group-item">
-                    {{ file }}
-                    <span class="text-muted small ms-3">(Proxying of actual file downloads not implemented in this demo)</span>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <strong>{{ file }}</strong>
+                        <a href="{{ download_url }}/{{ item_id }}/{{ file }}" target="_blank" class="btn btn-sm btn-primary">Download</a>
+                    </div>
+                    
+                    {# Detect if file is an image and display it #}
+                    {% set ext = file.split('.')[-1].lower() %}
+                    {% if ext in ['jpg', 'jpeg', 'png', 'gif', 'webp'] %}
+                    <div class="text-center bg-light p-3 rounded border">
+                        <img src="{{ download_url }}/{{ item_id }}/{{ file }}" alt="{{ file }}" class="img-fluid rounded shadow-sm" style="max-height: 400px;">
+                    </div>
+                    {% endif %}
                 </li>
                 {% endfor %}
             </ul>
